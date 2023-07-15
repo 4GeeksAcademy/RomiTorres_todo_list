@@ -16,9 +16,8 @@ import React, { useState } from 'react';
   };
 
   const handleDelete = (index) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+    const newItemList = todos.filter((_, i)=> i !== index)
+   setTodos(newItemList)
   };
 
   return (
